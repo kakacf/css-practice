@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="reset.css">
+    <title>Document</title>
+
+    <style>
+
+        .wrap {
+            width: 960px;
+            height: 100vh;
+            margin: 0 auto;
+            background-color: rgb(249, 255, 192);
+
+            /* flex 水平置中 -> justify-content: flex-start center flex-end  */
+            /* flex 垂直置中 -> align-items: flex-start center flex-end  */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn {
+            width: 120px;
+            cursor: pointer;
+            background-color: pink;
+            padding:10px;
+            display: inline-block;
+            font-size: 32px;
+
+            padding: 10px;
+            
+            transition: width 2s ease, padding 1s ease;
+        }
+
+        .btn:hover {
+            color: orangered;
+            padding: 20px;
+            width: 200px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="btn">Button</div>
+    </div>
+
+    
+</body>
+</html>

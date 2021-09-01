@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <title>Document</title>
+
+    <style>
+
+        .container {
+            width: 960px;
+            background-color: rgb(199, 214, 158);
+            margin: auto;
+            /* 置中： */
+        }
+
+        .item {
+            width: 300px;
+            background-color: pink;
+            float: left;
+            margin: 10px;
+            padding:10px;
+            box-sizing: border-box; /* -> 寬度計算範圍：依 border 到 border 之間距離 */
+            /* box-sizing: content-box; -> 寬度計算範圍：依 內容距離 */
+        }
+
+        .clearfix {
+            /* 避免因為 float 造成 container 無法被撐開 */
+            clear: both;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis ratione 
+            fugit, molestiae deserunt ad 
+            tempore explicabo, recusandae voluptates 
+            soluta eius sunt, animi debitis voluptate non deleniti. 
+            Tempora pariatur quia quidem.
+        </div>
+        <div class="item">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis ratione 
+            fugit, molestiae deserunt ad 
+            tempore explicabo, recusandae voluptates 
+            soluta eius sunt, animi debitis voluptate non deleniti. 
+            Tempora pariatur quia quidem.
+        </div>
+        <div class="item">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis ratione 
+            fugit, molestiae deserunt ad 
+            tempore explicabo, recusandae voluptates 
+            soluta eius sunt, animi debitis voluptate non deleniti. 
+            Tempora pariatur quia quidem.
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    
+</body>
+</html>

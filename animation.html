@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="reset.css">
+    <title>Document</title>
+
+    <style>
+
+        .wrap {
+            position: relative;
+            width: 960px;
+            height: 100vh;
+            margin: 0 auto;
+            background-color: rgb(249, 255, 192);
+
+            /* flex 水平置中 -> justify-content: flex-start center flex-end  */
+            /* flex 垂直置中 -> align-items: flex-start center flex-end  */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            position: fixed;
+            bottom: 0px;
+
+            width: 180px;
+            height: 50px;
+            
+            cursor: pointer;
+            background-color: pink;
+            padding:10px;
+            display: inline-block;
+            font-size: 32px;
+            padding: 10px;
+
+
+            /* opacity: 0; */
+            transform: translate(0,100%);
+            transition: all 0.5s ease;
+	        /* transition: all 450ms cubic-bezier(0.32,1,0.23,1) 100ms; */
+
+            /* animation: 動畫名稱 播放時間 延遲執行時間 速度 次數 方向 填充模式 播放狀態 */
+            /* animation: changePadding 1s 0.5s; */
+
+            /* transform: translate(0px, 100px); */
+            /* animation: moveUp 1s 0.5s; */
+            
+        }
+
+        .box-active {
+            /* opacity: 1; */
+            transform: translate(0,0);
+            /* background-color: #45CEE0; */
+        }
+
+        @keyframes moveUp {
+            0% {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+
+            50% {
+                transform: translateY(50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+
+        @keyframes changePadding {
+            0% {
+                padding:15px;
+            }
+
+            50% {
+                padding:20px;
+            }
+
+            100% {
+                padding:25px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+        <input type="button" id="button" value="Click" onclick="moveBox()"></input>
+        <div id="mybox" class="box">Animation</div>
+    </div>
+
+
+
+
+    <script>
+
+        function moveBox () {
+            console.log('object :>> ');
+            document.getElementById('mybox').classList.add("box-active");
+        }
+        // $("#button").click(function() {
+        //     $('.box').toggleClass('box-active');
+        // });
+    
+    </script>
+    
+</body>
+
+
+</html>
