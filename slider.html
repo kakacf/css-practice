@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <title>Slider</title>
+
+    <style>
+
+        .container {
+            width: calc(100vw - 20px);
+            height: calc(100vh - 20px);
+            background: rgb(229, 219, 231);
+            padding: 10px;
+
+            overflow: hidden;
+	        position: relative;
+
+            
+            
+
+        }
+
+        #ul {
+            border: 1px solid black;
+            width: calc(100% - 20px); /* ul的寬度我們選擇業讓那個js動態生成,這樣可以減少後期修改帶來的麻煩 */
+            /* width: 500px; */
+            height: 350px;
+            position: absolute;
+          
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .li {
+            list-style: none;
+            width: 250px;
+            position: absolute;
+            
+        }
+
+        .img {
+            width: 100%;
+            
+
+        }
+
+        #left, #right {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 10px;
+            top: 25%;
+            margin-top: -20px;
+            background-color: cadetblue;
+            cursor: pointer;
+            line-height: 40px;
+            text-align: center;
+            font-weight: bold;
+            font-family: '黑體';
+            font-size: 30px;
+            color: #000;
+            opacity: 0.5;
+            border: 1px solid #fff;
+        }
+
+        #right{ 
+            right: 10px;
+            left: auto;
+        }
+
+        #left:hover, #right:hover {
+            opacity: 1;
+            border-color: #000;
+            color: #fff;
+        }
+              
+        #ol{
+            /*底部的圖片精準選擇按鈕*/
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+        }
+        
+
+    </style>
+    <!-- https://www.gushiciku.cn/pl/ggDj/zh-tw -->
+    <!-- https://penueling.com/%E6%8A%80%E8%A1%93%E7%AD%86%E8%A8%98/%E4%B8%8D%E5%AE%89%E8%A3%9D%E5%A5%97%E4%BB%B6-%E8%A3%BD%E4%BD%9C%E9%9F%BF%E6%87%89%E5%BC%8F-rwd-%E8%BC%AA%E6%92%AD%E6%95%88%E6%9E%9C-slider/ -->
+</head>
+<body>
+
+    <div class="container">
+        <ul id="ul">
+            <li class="li"><a href="###"><img class="img" src="assets/images/cat1.jpg" alt=""></a></li>
+            <li class="li"><a href="###"><img class="img" src="assets/images/cat2.jpg" alt=""></a></li>
+            <li class="li"><a href="###"><img class="img" src="assets/images/cat3.jpg" alt=""></a></li>
+            <li class="li"><a href="###"><img class="img" src="assets/images/cat4.jpg" alt=""></a></li>
+        </ul>
+
+        <span id="left" onclick="left()">< </span>
+        <span id="right" onclick="right()">></span>
+        <ol id="ol">
+            <!--由js動態生成<li>-->
+        </ol>
+
+    </div>
+
+
+
+
+    
+</body>
+</html>
